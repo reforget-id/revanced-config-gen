@@ -270,6 +270,12 @@
 
     {#await patches then patches}
       <hr class="my-3 border-t border-gray-300" />
+      <Dropdown
+        optionName={"patches"}
+        options={patches}
+        bind:selected={selected_patches}
+        bind:selectedOpts
+      />
     {:catch error}
       <div
         class="border border-t-0 border-red-200 rounded-b bg-red-100 text-red-400"
