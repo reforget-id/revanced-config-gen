@@ -121,7 +121,7 @@
     </a>
 
     <a
-      href="https://github.com/j-hc/revanced-magisk-module"
+      href="https://github.com/reforget-id/revanced-config-gen"
       target="_blank"
       rel="noreferrer noopener"
     >
