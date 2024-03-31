@@ -58,8 +58,7 @@
         });
       }
     }
-    patches.concat(universalPatches);
-    return patches;
+    return patches.concat(universalPatches);
   }
 
   const PKG_APPNAME = {
