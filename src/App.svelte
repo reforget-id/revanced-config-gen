@@ -28,6 +28,7 @@
 
   async function getPatches(pkgName, patchesJson) {
     const patches = [];
+    const universalPatches = [];
     for (const patch of await patchesJson) {
       for (const pkg of patch["compatiblePackages"] || []) {
         if (pkg["name"] === pkgName) {
@@ -38,18 +39,17 @@
             });
           }
           const versions = [...versionsSet];
-          const patchC = {
+          patches.push({
             ["name"]: patch["name"],
             ["description"]: patch["description"],
             ["pkg_versions"]: versions,
             ["use"]: patch["use"],
             ["patchOptions"]: patch["options"],
-          };
-          patches.push(patchC);
+          });
         }
       }
       if (patch["compatiblePackages"] === null) {
-        patches.push({
+        universalPatches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
           ["pkg_versions"]: ["Universal patch"],
@@ -58,6 +58,7 @@
         });
       }
     }
+    patches.concat(universalPatches)
     return patches;
   }
 
