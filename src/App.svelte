@@ -49,6 +49,7 @@
         }
       }
       if (patch["compatiblePackages"] === null) {
+        console.log(patch);
         patches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
