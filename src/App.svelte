@@ -48,6 +48,15 @@
           patches.push(patchC);
         }
       }
+      if (patch["compatiblePackages"] === null) {
+        patches.push({
+          ["name"]: patch["name"],
+          ["description"]: patch["description"],
+          ["pkg_versions"]: "Universal patch",
+          ["use"]: patch["use"],
+          ["patchOptions"]: patch["options"],
+        });
+      }
     }
     return patches;
   }
