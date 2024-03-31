@@ -60,7 +60,7 @@
         });
       }
     }
-    patches.concat(universalPatches)
+    patches.concat(universalPatches);
     return patches;
   }
 
