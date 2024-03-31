@@ -37,7 +37,9 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: |
+              npm install
+              npm i -D @sveltejs/adapter-static
 
       - name: build
         env:
