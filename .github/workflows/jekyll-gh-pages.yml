@@ -6,7 +6,7 @@ on:
     inputs:
       branch:
         description: "Branch"
-        default: "main"
+        default: "master"
         required: true
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
