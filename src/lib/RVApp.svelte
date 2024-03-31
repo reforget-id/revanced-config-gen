@@ -272,7 +272,7 @@
       <hr class="my-3 border-t border-gray-300" />
       <Dropdown
         optionName={"patches"}
-        options={patches}
+        options={patches_source}
         bind:selected={selected_patches}
         bind:selectedOpts
       />
