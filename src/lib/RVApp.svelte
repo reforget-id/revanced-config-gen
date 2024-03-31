@@ -60,8 +60,7 @@
         });
       }
     }
-    patches.concat(universalPatches);
-    return patches;
+    return patches.concat(universalPatches);
   }
 
   let raw_patches_json;
