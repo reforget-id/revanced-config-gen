@@ -48,7 +48,7 @@
           patches.push(patchC);
         }
       }
-      console.log(patch);
+      $: console.log(patch)
       if (patch["compatiblePackages"] === null) {
         patches.push({
           ["name"]: patch["name"],
