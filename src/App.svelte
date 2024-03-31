@@ -29,6 +29,25 @@
   async function getPatches(pkgName, patchesJson) {
     const patches = [];
     for (const patch of await patchesJson) {
+      for (const pkg of patch["compatiblePackages"] || []) {
+        if (pkg["name"] === pkgName) {
+          const versionsSet = new Set();
+          if (pkg["versions"] !== null) {
+            pkg["versions"].forEach((e) => {
+              versionsSet.add(e);
+            });
+          }
+          const versions = [...versionsSet];
+          const patchC = {
+            ["name"]: patch["name"],
+            ["description"]: patch["description"],
+            ["pkg_versions"]: versions,
+            ["use"]: patch["use"],
+            ["patchOptions"]: patch["options"],
+          };
+          patches.push(patchC);
+        }
+      }
       if (patch["compatiblePackages"] === null) {
         const patchC = {
           ["name"]: patch["name"],
