@@ -41,7 +41,7 @@
           const patchC = {
             ["name"]: patch["name"],
             ["description"]: patch["description"],
-            ["pkg_versions"]: ["Universal patch"],
+            ["pkg_versions"]: versions,
             ["use"]: patch["use"],
             ["patchOptions"]: patch["options"],
           };
@@ -52,7 +52,7 @@
         patches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
-          ["pkg_versions"]: "Universal patch",
+          ["pkg_versions"]: ["Universal patch"],
           ["use"]: patch["use"],
           ["patchOptions"]: patch["options"],
         });
