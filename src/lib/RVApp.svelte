@@ -50,7 +50,7 @@
           patches.push(patchC);
         }
       }
-      if (patch["compatiblePackages"] == null) {
+      if (patch["compatiblePackages"] === null) {
         patches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
