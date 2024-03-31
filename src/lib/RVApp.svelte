@@ -54,7 +54,7 @@
         patches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
-          ["pkg_versions"]: "Universal patch",
+          ["pkg_versions"]: ["Universal patch"],
           ["use"]: patch["use"],
           ["patchOptions"]: patch["options"],
         });
