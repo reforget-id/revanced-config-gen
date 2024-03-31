@@ -49,14 +49,13 @@
         }
       }
       if (patch["compatiblePackages"] === null) {
-        const patchC = {
+        patches.push({
           ["name"]: patch["name"],
           ["description"]: patch["description"],
           ["pkg_versions"]: "Universal patch",
           ["use"]: patch["use"],
           ["patchOptions"]: patch["options"],
-        };
-        patches.push(patchC);
+        });
       }
     }
     return patches;
