@@ -4,7 +4,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 // https://vitejs.dev/config/
 const c = defineConfig({
   plugins: [svelte()],
-  base: "/rvmm-config-gen/",
+  base: "/revanced-config-gen/",
   build: {
     outDir: 'docs'
   }
