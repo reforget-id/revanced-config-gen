@@ -5,7 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 const config = {
 	kit: {
 		adapter: adapter({
-			pages: 'build',
+			pages: 'docs',
 		}),
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
