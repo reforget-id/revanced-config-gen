@@ -110,7 +110,7 @@
 </script>
 
 <main>
-  <p class="m-4">RVMM Config Generator</p>
+  <p class="m-4">Revanced Config Generator</p>
   <div class="inline-flex">
     <a href="https://t.me/rvc_magisk" target="_blank" rel="noreferrer noopener">
       <svg class="m-4" width="2rem" height="auto" viewBox="0 0 16 16">
